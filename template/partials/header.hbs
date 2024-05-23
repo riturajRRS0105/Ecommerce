@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/header.css" class="">
+</head>
+<body>
+    
+     <nav class="bar inc">
+        <div class="right ">Fitness Freak</div>
+
+        <div class="left ll">
+  {{#if notuser}}     
+    <a class="link" href="/" class="">Products</a>
+        <a class="link" href="/signup" class="">Signup</a>
+          <a class="link" href="/login" class="">Login</a>
+     {{else}}  
+     <a class="link" href="/index" class="">Products</a>
+     <a class="link" href="/cart" class="">Cart</a>
+     <a class="link" href="/order" class="">Order</a>
+     <a class="link" href="/addproduct" class="">Add product</a>
+     <a class="link" href="/adminproduct" class="">Admin Products</a>
+     <a class="link" href="/logout" class="">Logout</a>   
+{{/if}}
+          
+           
+        </div>
+      </nav>
+
+
+</body>
+</html>

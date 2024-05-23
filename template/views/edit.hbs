@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/sign.css" class="">
+</head>
+<body>
+    {{>header}}
+
+<form action="/editdata?id={{id}}" method="POST">
+
+<input type="text" name="name"  placeholder="Product Name" >
+
+<input type="number" name="price"  placeholder="Price" >
+<input type="file" name="img" placeholder="Product Image"  >
+<input type="text" name="disc" placeholder="Discription"  >
+<button type="submit">Edit</button>
+{{#if msg}}
+<p class="msg" >{{msg}}</p>
+{{/if}}
+</form>
+
+
+
+
+
+</body>
+</html>

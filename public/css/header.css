@@ -1,0 +1,46 @@
+
+.bar {
+    color: black;
+    background-color: black;
+    display: flex;
+
+    padding: 10px 20px;
+    z-index: 10;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    display: flex;
+  
+    align-items: center;
+  }
+  .right {
+    width: 40%;
+  font-size: 2rem;
+    font-weight: bold;
+    font-family: "Metal Mania", cursive;
+    margin-left: 20px;
+    color:white;
+    background-color: transparent!important;
+  }
+  .left {
+      font-size: 1.4rem;
+      position: absolute;
+    right:1%;
+    margin-right: 40px;
+    z-index: 20;
+    align-self: flex-start;
+    margin-top: 8px;
+  }
+  a{
+      margin: 0px 25px;
+      color: white;
+      text-decoration: none;
+
+
+  }
+  a:hover{
+      text-decoration: underline;
+  }
+  a:active{
+    text-decoration: underline;
+  }

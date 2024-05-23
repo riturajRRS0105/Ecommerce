@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/cart.css" class="">
+</head>
+<body>
+    {{>header}}
+
+    <div class="main" >
+        {{#if msg}}
+
+<h1>{{msg}}</h1>
+        {{else}}
+    {{#each product}}
+    <div class="bb">
+<div class="box">
+
+<div class="h"><h2>{{this.name}}</h2>
+<h4>Rs.{{this.price}} X {{this.no}}</h4></div>
+<h2 class="hh" >Rs.{{this.tot}}</h2>
+
+<a class="aa" href="/delete?id={{this._id}}"><button>Delete</button></a>
+<hr>
+</div>
+<hr>
+</div>
+
+    {{/each}}
+
+<h2>Total=Rs. {{price}}</h2>
+<button class="bbtt" >Order</button>
+{{/if}}
+    </div>
+
+<script src="js/cart.js"></script>
+
+
+</body>
+
+</html>

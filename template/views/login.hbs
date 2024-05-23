@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/sign.css" class="">
+</head>
+<body>
+    {{>header}}
+
+{{#if forgot}}
+
+<form action="/forgot" method="POST">
+
+<input type="email" name="email" required placeholder="Email" >
+
+
+<button type="submit">Send</button>
+
+
+</form>
+
+
+{{else}}
+
+{{#if reset}}
+<form action="/reset/data?token={{token}}" method="POST">
+
+
+<input type="password" name="password" required placeholder="Password" >
+
+<button type="submit">Reset</button>
+
+
+</form>
+{{else}}
+<form action="/login/data" method="POST">
+
+<input type="email" name="email" required placeholder="Email" >
+
+<input type="password" name="password" required placeholder="Password" >
+
+<button type="submit">Login</button>
+
+<a class="forgot" href="/login?forgot=1" >Forgot password</a>
+{{#if msg}}
+<p class="msg" >{{msg}}</p>
+{{/if}}
+
+</form>
+{{/if}}
+{{/if}}
+
+
+
+
+
+</body>
+</html>

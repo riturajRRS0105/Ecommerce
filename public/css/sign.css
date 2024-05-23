@@ -1,0 +1,84 @@
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: auto;
+    margin-top: 40px;
+    position:absolute;
+  top:20%; bottom:20%
+}
+input{
+    margin: 15px;
+    font-size: 1.5rem;
+    padding: 8px 14px;
+    text-align: center;
+    
+    width: 22%;
+    
+    border: none;
+    border-bottom: 1px solid black;
+}
+
+input::after{
+    border-radius: 1px;
+}
+p{
+    color: white;
+}
+a{
+    font-size: 1.4rem;
+    color: white;
+    margin: 0px 4px;
+    
+}
+a:hover{
+    color: turquoise;
+}
+button{
+  
+    border-radius: 40px;
+    padding: 4px 28px;
+    font-size: 1.5rem;
+    border-color: none;
+    background-color: white;
+    transition: 0.4s linear;
+
+}
+.forgot{
+    color: black!important;
+    margin-top: 25px;
+    text-decoration:underline !important;
+
+}
+
+button:hover{
+    background-color:black;
+    color: white;
+    cursor: pointer;
+}
+.msg{
+    color: black;
+
+    font-size: 1.8rem;
+}
+.text{
+   
+     
+        display: inline-block;
+        padding: 6px 12px;
+        cursor: pointer;
+        content: 'Select some files';
+        display: inline-block;
+        
+     
+      
+        padding: 5px 8px;
+     
+        white-space: nowrap;
+   
+        cursor: pointer;
+      
+    
+}

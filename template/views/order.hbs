@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/car.css" class="">
+</head>
+<body>
+    {{>header}}
+
+    <div class="main" >
+        {{#if msg}}
+<h1>{{msg}}</h1>
+        {{else}}
+        <h1 class="or" >Your Orders</h1>
+    {{#each order}}
+    <div class="nnbb">
+    <div class="bb">
+      <div class="b1">
+        {{#each products}}
+<div class="box">
+
+<div class="h"><h2>{{this.name}} ({{this.no}})</h2>
+</div>
+</div>
+{{/each}}
+</div>
+ <p> #OrderId = <span>{{this._id}} </span>( {{this.userData.email}} ) </p> 
+      <a href="/invoice?id={{this._id}}" ><h3 class="in" >Invoice</h3></a> 
+        </div>
+<hr>
+
+</div>
+
+
+    {{/each}}
+
+{{/if}}
+
+    </div>
+
+
+
+</body>
+
+</html>
